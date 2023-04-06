@@ -2,6 +2,6 @@
     <div class="container pt-4">
         <h1> <?php $session = session();
                 echo $session->get('username'); ?> </h1>
-        <h1>Welcome Admin</h1>
+        <h1>Welcome Administrator</h1>
     </div>
 </main>

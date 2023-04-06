@@ -19,8 +19,6 @@
         </div>
     </div>
     <!-- Navbar & Carousel End -->
-
-
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen">
