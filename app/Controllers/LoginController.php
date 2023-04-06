@@ -7,7 +7,6 @@ use App\Controllers\BaseController;
 
 class LoginController extends BaseController
 {
-    //open the login file
     public function index()
     {
         helper(['form']);
@@ -18,7 +17,7 @@ class LoginController extends BaseController
     {
         //
     }
-    //save the data from signup form
+
     public function save(){
         helper(['form']);
         $userModel = new UserModel();
@@ -39,7 +38,7 @@ class LoginController extends BaseController
     
         
     }
-    //this is the login function
+
     public function login()
     {
         $session = session();
@@ -81,6 +80,71 @@ class LoginController extends BaseController
         $session = session();
         $session->destroy();
         return  view('/inc/header') . view('signin') .  view('/inc/footer');
+        
+    }
+    public function users(){
+        $session = session();
+                
+		if ($session->get('role') == 'Admin'){
+			helper(['form']);
+            $data = [];
+                        
+                $userModel = new UserModel();
+                
+                $data['users'] = $userModel->orderBy('id', 'asc')->findAll(); 
+                return  view('/inc/appheader') . view('users', $data) .  view('/inc/appfooter');
+            
+
+		} else {
+			$session = session();  
+            $session->destroy();
+            return redirect()->to('/');
+		}        
+        
+    }
+    public function createuser() {
+        return  view('/inc/appheader') . view('createuser') .  view('/inc/appfooter');
+    }
+    public function store(){
+        helper(['form']);
+        $userModel = new UserModel();
+        $data = [
+            
+            'fullName' => $this->request->getVar('full_name'),
+            'username' => $this->request->getVar('username'),
+            'userphone' => $this->request->getVar('phoneNo'),
+            'useremail' => $this->request->getVar('email'),
+            'address' => $this->request->getVar('address'),
+            'gender' => $this->request->getVar('gender'),
+            'role' => $this->request->getVar('role'),
+            'userpassword' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+            
+        ];
+        
+        $userModel->insert($data);
+        return $this->response->redirect('/users');
+    
+        
+    }
+
+    public function investors(){
+        $session = session();
+                
+		if ($session->get('role') == 'Relationship Manager'){
+			helper(['form']);
+            $data = [];
+                        
+                $userModel = new UserModel();
+                
+                $data['users'] = $userModel->where('role', 'Investor')->orderBy('id', 'asc')->findAll(); 
+                return  view('/inc/appheader') . view('investors', $data) .  view('/inc/appfooter');
+            
+
+		} else {
+			$session = session();  
+            $session->destroy();
+            return redirect()->to('/');
+		}        
         
     }
 }

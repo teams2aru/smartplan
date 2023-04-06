@@ -11,15 +11,27 @@
                                 <?= session()->getFlashdata('msg') ?>
                             </div>
                         <?php endif; ?>
-                        <label for="useremail">Username</label>
-                        <input type="email" name="useremail" id="useremail">
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="useremail">Username</label>
+                                <input type="email" name="useremail" id="useremail" class="form-control">
+                            </div>
+                        </div>
 
-                        <label for="pass">Password</label>
-                        <input type="password" name="pass" id="pass">
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="pass">Password</label>
+                                <input type="password" name="pass" id="pass" class="form-control">
+                            </div>
+                        </div>
+
+
+
 
                         <div>
                             <button type="submit">Sign in</button>
-                            <button><a href="/signup" style="color: #FFFFFF;">Register </a></button>
+                            <button><a href="/apply" style="color: #FFFFFF;">Register </a></button>
 
                         </div>
 

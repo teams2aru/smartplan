@@ -44,6 +44,18 @@ $routes->get('/addproduct', 'ProductController::add');
 $routes->match(['get', 'post'], 'ProductController/save', 'ProductController::save');
 $routes->get('/product/delete/(:num)', 'ProductController::delete/$1');
 $routes->get('/product/viewproduct/(:num)', 'ProductController::viewProduct/$1');
+$routes->get('/product/reviewidea/(:num)', 'ProductController::reviewidea/$1');
+$routes->post('/product/approveidea', 'ProductController::approveidea');
+$routes->get('/product/tag/(:num)', 'ProductController::tag/$1');
+$routes->post('/product/tagusers', 'ProductController::taguser');
+
+$routes->get('/users', 'LoginController::users');
+$routes->get('/adduser', 'LoginController::createuser');
+$routes->match(['get', 'post'], 'LoginController/store', 'LoginController::store');
+
+$routes->get('/investors', 'LoginController::investors');
+$routes->get('/approvedideas', 'ProductController::approvedideas');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

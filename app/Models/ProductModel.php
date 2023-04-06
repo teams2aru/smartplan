@@ -14,12 +14,24 @@ class ProductModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [
+    protected $allowedFields    = [        
         'id',
         'productname',
-        'productprice',
-        'productquantity',
-        'remarks'
+        'idea_type',
+        'idea_abstract',
+        'idea_descr',
+        'author',
+        'idea_expiry',
+        'idea_risk',
+        'idea_instruments',
+        'idea_currency',
+        'idea_major',
+        'idea_minor',
+        'idea_region',
+        'idea_country',
+        'idea_status',
+        'approved_by',
+        'taggedusers'
     ];
 
     // Dates

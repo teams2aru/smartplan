@@ -14,16 +14,17 @@ class DashController extends BaseController
 
             return  view('/inc/appheader') . view('admindash') .  view('/inc/appfooter');
 
-        } else if ($session->get('isLoggedIn') && $session->get('role') == 'rm') {
+        } else if ($session->get('isLoggedIn') && $session->get('role') == 'Relationship Manager') {
 
-            return  view('/inc/appheader') . view('dashboard') .  view('/inc/appfooter');
+            return  view('/inc/appheader') . view('rmdash') .  view('/inc/appfooter');
 
         } else if ($session->get('isLoggedIn') && $session->get('role') == 'Investor') {
 
             return  view('/inc/appheader') . view('investordash') .  view('/inc/appfooter');
 
         } else if (!$session->get('isLoggedIn')) {
-            
+            $session = session();  
+            $session->destroy();
             return  view('/inc/header') . view('signin') .  view('/inc/footer');
 
         }
