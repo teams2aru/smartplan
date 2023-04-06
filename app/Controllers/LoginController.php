@@ -7,6 +7,7 @@ use App\Controllers\BaseController;
 
 class LoginController extends BaseController
 {
+    //open the login file
     public function index()
     {
         helper(['form']);
@@ -17,7 +18,7 @@ class LoginController extends BaseController
     {
         //
     }
-
+    //save the data from signup form
     public function save(){
         helper(['form']);
         $userModel = new UserModel();
@@ -38,7 +39,7 @@ class LoginController extends BaseController
     
         
     }
-
+    //this is the login function
     public function login()
     {
         $session = session();
