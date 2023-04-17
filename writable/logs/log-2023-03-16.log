@@ -1,0 +1,24 @@
+ERROR - 2023-03-16 07:21:56 --> ErrorException: Undefined array key "make:cell" in E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php:270
+Stack trace:
+#0 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\Jobs\\UK Jobs...', 270)
+#1 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php(292): CodeIgniter\Commands\Generators\CellGenerator->renderTemplate(Array)
+#2 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php(204): CodeIgniter\Commands\Generators\CellGenerator->parseTemplate('App\\Cells\\Signu...')
+#3 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php(302): CodeIgniter\Commands\Generators\CellGenerator->prepare('App\\Cells\\Signu...')
+#4 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php(115): CodeIgniter\Commands\Generators\CellGenerator->buildContent('App\\Cells\\Signu...')
+#5 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\Commands\Generators\CellGenerator.php(83): CodeIgniter\Commands\Generators\CellGenerator->generateClass(Array)
+#6 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\Commands.php(65): CodeIgniter\Commands\Generators\CellGenerator->run(Array)
+#7 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('make:cell', Array)
+#8 E:\Jobs\UK Jobs\BenGhana\smartInvests\spark(97): CodeIgniter\CLI\Console->run()
+#9 {main}
+ERROR - 2023-03-16 07:21:56 --> ErrorException: Undefined array key "make:cell" in E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php:270
+Stack trace:
+#0 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\Jobs\\UK Jobs...', 270)
+#1 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php(292): CodeIgniter\Commands\Generators\CellGenerator->renderTemplate(Array)
+#2 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php(204): CodeIgniter\Commands\Generators\CellGenerator->parseTemplate('App\\Cells\\signu...')
+#3 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php(302): CodeIgniter\Commands\Generators\CellGenerator->prepare('App\\Cells\\signu...')
+#4 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\GeneratorTrait.php(132): CodeIgniter\Commands\Generators\CellGenerator->buildContent('App\\Cells\\signu...')
+#5 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\Commands\Generators\CellGenerator.php(101): CodeIgniter\Commands\Generators\CellGenerator->generateView('App\\Cells\\signu...', Array)
+#6 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\Commands.php(65): CodeIgniter\Commands\Generators\CellGenerator->run(Array)
+#7 E:\Jobs\UK Jobs\BenGhana\smartInvests\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('make:cell', Array)
+#8 E:\Jobs\UK Jobs\BenGhana\smartInvests\spark(97): CodeIgniter\CLI\Console->run()
+#9 {main}
