@@ -5,7 +5,10 @@
     --light: #EEF9FF;
     --dark: #091E3E;
 }
-
+.container{
+    padding-left: 150px;
+    height: max-content;
+}
 
 /*** Spinner ***/
 .spinner {

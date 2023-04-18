@@ -70,6 +70,27 @@ class Database extends Config
         'busyTimeout' => 1000,
     ];
 
+    public array $db = array(
+        'dsn'   => '',
+        'hostname' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'finance',
+        'dbdriver' => 'mysqli',
+        'dbprefix' => '',
+        'pconnect' => TRUE,
+        'db_debug' => TRUE,
+        'cache_on' => FALSE,
+        'cachedir' => '',
+        'char_set' => 'utf8',
+        'dbcollat' => 'utf8_general_ci',
+        'swap_pre' => '',
+        'encrypt' => FALSE,
+        'compress' => FALSE,
+        'stricton' => FALSE,
+        'failover' => array()
+);
+
     public function __construct()
     {
         parent::__construct();
@@ -81,4 +102,5 @@ class Database extends Config
             $this->defaultGroup = 'tests';
         }
     }
+
 }

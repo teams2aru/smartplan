@@ -73,6 +73,7 @@
                     <a href="/products" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-bar fa-fw me-3"></i><span>ideas</span></a>
                     
                     <a href="/users" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-users fa-fw me-3"></i><span>Users</span></a>
+                    <a href="/messages" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-envelope fa-fw me-3"></i><span>messages</span></a>
                 </div>
             </div>
         </nav>
@@ -87,6 +88,7 @@
                     <a href="/products" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-bar fa-fw me-3"></i><span>Ideas</span></a>
                     
                     <a href="/investors" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-users fa-fw me-3"></i><span>Investors</span></a>
+                    <a href="/messages" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-envelope fa-fw me-3"></i><span>messages</span></a>
                 </div>
             </div>
         </nav>
@@ -99,6 +101,7 @@
                     </a>
 
                     <a href="/approvedideas" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-bar fa-fw me-3"></i><span>Products</span></a>
+                    <a href="/messages" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-envelope fa-fw me-3"></i><span>messages</span></a>
                     
                 </div>
             </div>
@@ -112,6 +115,7 @@
                     </a>
 
                     <a href="/products" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-bar fa-fw me-3"></i><span>My Ideas</span></a>
+                    <a href="/messages" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-envelope fa-fw me-3"></i><span>messages</span></a>
                     
                 </div>
             </div>
@@ -143,4 +147,5 @@
         </div>
         <!-- Container wrapper -->
     </nav>
+
 </header>

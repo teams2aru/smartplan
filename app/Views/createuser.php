@@ -1,4 +1,5 @@
-<main style="margin-top: 58px;">
+
+
     <div class="container pt-4">
         <div class="container logincontainer mb-5">
             <div class="row justify-content-md-center">
@@ -79,7 +80,7 @@
 
             </div>
         </div>
-</main>
+
 
 <script>
     jQuery('.validatedForm').validate({

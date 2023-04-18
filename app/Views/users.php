@@ -29,8 +29,8 @@
                             <td><?php echo $user['role']; ?></td>
 
                             <td>
-                                <a href="<?php echo base_url('users/viewuser/' . $user['id']); ?>" class="btn btn-primary btn-sm">Edit</a>
-                                <a href="<?php echo base_url('/users/delete/' . $user['id']); ?>" class="btn btn-danger btn-sm">Delete</a>
+                                
+                                <a href="<?php echo base_url('user/delete/' . $user['id']); ?>" class="btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>
                     <?php $i++;

@@ -47,7 +47,7 @@ class LoginController extends BaseController
         $password = $this->request->getVar('pass');
 
         $data = $userModel->where('useremail', $email)->first();
-
+ 
         if ($data) {
             $pass = $data['userpassword'];
             $authenticatePassword = password_verify($password, $pass);
@@ -69,7 +69,7 @@ class LoginController extends BaseController
             }
         } else {
             
-            $session->setFlashdata('msg', $email);
+            $session->setFlashdata('msg', $data);
             
             return $this->response->redirect('/signin');
         }
@@ -144,7 +144,17 @@ class LoginController extends BaseController
 			$session = session();  
             $session->destroy();
             return redirect()->to('/');
-		}        
+		}     
         
+    }
+
+    public function delete($id = null){
+        $session = session();
+        if (!$session->get('isLoggedIn')){
+            echo view('homepage');
+        }
+        $userModel = new UserModel();
+        $data['idea'] = $userModel->where('id', $id)->delete($id);
+        return $this->response->redirect(site_url('/users'));
     }
 }

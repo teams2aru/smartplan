@@ -12,7 +12,7 @@ class ProductController extends BaseController
     {
         $session = session();
 
-        if ($session->get('role') == 'Admin' || $session->get('role') == 'Relationship Manager') {
+        if ($session->get('role') == 'Admin' || $session->get('role') == 'Relationship Manager' || $session->get('role') == 'Creator' ) {
             helper(['form']);
             $data = [];
 
@@ -101,6 +101,17 @@ class ProductController extends BaseController
         return  view('/inc/appheader') . view('viewProduct', $data) .  view('/inc/appfooter');
     }
 
+    public function invest($id = null)
+    {
+        $session = session();
+        if (!$session->get('isLoggedIn')) {
+            echo view('homepage');
+        }
+        $ProductModel = new ProductModel();
+        $data['producttable'] = $ProductModel->where('id', $id)->first();
+        return  view('/inc/appheader') . view('invest', $data) .  view('/inc/appfooter');
+    }
+
     public function reviewidea($id = null)
     {
         $session = session();
@@ -132,7 +143,6 @@ class ProductController extends BaseController
             echo view('homepage');
         }
         $userModel = new UserModel();
-
         $data['users'] = $userModel->where('role', 'Investor')->orderBy('id', 'asc')->findAll();
 
         $ProductModel = new ProductModel();
@@ -153,4 +163,6 @@ class ProductController extends BaseController
         $productModel->update($id, $data);
         return $this->response->redirect(site_url('/products'));
     }
+
+
 }

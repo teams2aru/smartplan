@@ -48,13 +48,22 @@ $routes->get('/product/reviewidea/(:num)', 'ProductController::reviewidea/$1');
 $routes->post('/product/approveidea', 'ProductController::approveidea');
 $routes->get('/product/tag/(:num)', 'ProductController::tag/$1');
 $routes->post('/product/tagusers', 'ProductController::taguser');
+$routes->get('/product/invest/(:num)', 'ProductController::invest/$1');
+$routes->match(['get', 'post'], 'InvestmentController/index', 'InvestmentController::index');
 
 $routes->get('/users', 'LoginController::users');
 $routes->get('/adduser', 'LoginController::createuser');
 $routes->match(['get', 'post'], 'LoginController/store', 'LoginController::store');
+$routes->get('/user/delete/(:num)', 'LoginController::delete/$1');
+
 
 $routes->get('/investors', 'LoginController::investors');
 $routes->get('/approvedideas', 'ProductController::approvedideas');
+
+$routes->get('/messages', 'MessagesController::index');
+$routes->get('/messages/compose', 'MessagesController::compose');
+$routes->get('/message/read/(:num)', 'MessagesController::read/$1');
+$routes->match(['get', 'post'], 'messages/send', 'MessagesController::send');
 
 /*
  * --------------------------------------------------------------------

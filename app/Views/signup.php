@@ -3,7 +3,7 @@
         <div class="carousel-item active">
             <img class="w-100" src="img\Which-Type-of-Investment-Has-the-Highest-Riskrea.jpg" alt="Image">
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <div class="p-3" style="max-width: 900px; background-color: rgb(111, 111, 197); margin-top: 50px; ">
+                <div class="p-3" style="width: 500px; max-width: 900px; background-color: rgb(111, 111, 197); margin-top: 50px; ">
                     <form action="<?php echo base_url(); ?>/LoginController/save" method="post">
                         <h1 style="text-align: center;">Sign uP</h1>
                         <label for="fname">Full Name</label>
@@ -39,6 +39,8 @@
 
                         <label for="pass">Password</label>
                         <input type="password" name="password" id="pass" required>
+                        <label for="cpass">Confirm Password</label>
+                        <input type="password" name="cpassword" id="cpass" required>
 
                         <button type="submit" style="display: block; margin: 10px auto; ">Submit</button>
                         

@@ -1,6 +1,6 @@
 <div class="container logincontainer mb-5 pt-4" style="margin-top: 50px">
     <?php $session = session();
-    if ($session->get('role') == 'Admin') {   ?>
+    if ($session->get('role') == 'Admin' ||  $session->get('role') == 'Creator' ) {   ?>
         <a href="/addproduct" class="btn btn-primary" role="button">Add Idea </a>
     <?php } ?>
     <h1> Ideas</h1>
@@ -35,14 +35,13 @@
                                 <a href="<?php echo base_url('product/tag/' . $product['id']); ?>" class="btn btn-primary btn-sm">Tag Clients</a>
 
                             <?php }
-                            if ($session->get('role') == 'Admin') {   ?>
+                            if ($session->get('role') == 'Admin' ||  $session->get('role') == 'Creator') {   ?>
                                 <a href="<?php echo base_url('/product/delete/' . $product['id']); ?>" class="btn btn-danger btn-sm">Delete</a>
 
                             <?php }
                             $session = session();
                             if ($session->get('role') == 'Investor') {   ?>
-                                <a href="<?php echo base_url('/product/viewproduct/' . $product['id']); ?>" class="btn btn-primary btn-sm">View</a>
-
+                                <a href="<?php echo base_url('/product/invest/' . $product['id']); ?>" class="btn btn-primary btn-sm">View</a>
                             <?php } ?>
                         </td>
 

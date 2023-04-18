@@ -12,6 +12,8 @@
     `idea_minor`,
     `idea_region`,
     `idea_country`
+     `idea_status`,
+    `approved_by`
 
 
     `id`,
@@ -23,3 +25,7 @@
     `gender`,
     `address`,
     `role`
+    
+
+    
+    

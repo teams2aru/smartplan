@@ -22,7 +22,11 @@ class DashController extends BaseController
 
             return  view('/inc/appheader') . view('investordash') .  view('/inc/appfooter');
 
-        } else if (!$session->get('isLoggedIn')) {
+        } else if ($session->get('isLoggedIn') && $session->get('role') == 'Creator') {
+
+            return  view('/inc/appheader') . view('creatordash') .  view('/inc/appfooter');
+
+        }  else if (!$session->get('isLoggedIn')) {
             $session = session();  
             $session->destroy();
             return  view('/inc/header') . view('signin') .  view('/inc/footer');
