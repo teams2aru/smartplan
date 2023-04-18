@@ -13,7 +13,7 @@
         </thead>
         <tbody>
             <?php if ($messages) : ?>
-                <?php $i = 1; // Compose message
+                <?php $i = 1; // Compose message to all
                 foreach ($messages as $message) : ?>
 
                     <tr>
