@@ -87,6 +87,12 @@
                                     <option>Kenya</option>
                                     <option>India</option>
                                     <option>Ghana</option>
+                                    <option>Australia</option>
+                                    <option>Senegal</option>
+                                    <option>Canada</option>
+                                    <option>India</option>
+                                    <option>Brazil</option>
+                                    <option>Russia</option>
                                 </select>
                             </div>
                         </div>
